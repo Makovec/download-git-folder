@@ -9,10 +9,9 @@ param(
 if( ($PSBoundParameters.ContainsKey('path')) -and 
     (-not $PSBoundParameters.ContainsKey('rootFolderName')) )
 {
+    Write-Verbose 'Assigning root folder to path folder.'
     $rootFolderName = Split-Path $path -Leaf
 }
-
-break
 
 $rootUri = 'https://api.github.com'
 $apiCall = "/repos/{0}/{1}/contents/{2}" -f $owner, $repo, $path
