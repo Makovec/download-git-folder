@@ -28,7 +28,7 @@ if( ($PSBoundParameters.ContainsKey('path')) -and
 $rootUri = 'https://api.github.com'
 $apiCall = "/repos/{0}/{1}/contents/{2}" -f $owner, $repo, $path
 $header = @{ 
-    'Authorization' = "token $GitApiKey" 
+    'Authorization' = "token $GitApiKey"
 }
 
 $rootPath = Join-Path -Path $PSScriptRoot -ChildPath $rootFolderName
