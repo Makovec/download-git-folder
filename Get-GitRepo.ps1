@@ -1,9 +1,9 @@
 [CmdletBinding()]
 param(
-    $owner = 'Makovec',
-    $repo = 'download-git-folder',
-    $path,
-    $rootFolderName = 'git-out'
+    $Owner = 'Makovec',
+    $Repo = 'download-git-folder',
+    $Path,
+    $RootFolderName = 'git-out'
 )
 
 if( ($PSBoundParameters.ContainsKey('path')) -and 
@@ -56,4 +56,4 @@ function Get-RestRec
     }
 }
 
-Get-RestRec -uri "$rootUri$apiCall" -Verbose
+Get-RestRec -uri "$rootUri$apiCall"
