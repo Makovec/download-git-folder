@@ -1,10 +1,22 @@
 [CmdletBinding()]
 param(
-    $Owner = 'Makovec',
-    $Repo = 'download-git-folder',
-    $Path,
+    [Parameter()]
+    [string]
+    $Owner = 'Makovec'
+    ,
+    [Parameter()]
+    [string]
+    $Repo = 'download-git-folder'
+    ,
+    [Parameter()]
+    [string]
+    $Path
+    ,
+    [Parameter()]
+    [string]
     $RootFolderName = 'git-out'
 )
+
 
 if( ($PSBoundParameters.ContainsKey('path')) -and 
     (-not $PSBoundParameters.ContainsKey('rootFolderName')) )
